@@ -1,12 +1,13 @@
 <%=   flash[:hoge]  %>
 
-<h2>Title</h2>
-<p><%= @book.title %></p>
+<br>
+<strong>Title:</strong><%= @book.title %>
+<br>
+<br>
+<strong>Body:</strong><%= @book.body %>
+<br>
+<br>
+<%= link_to "Edit", edit_book_path(@book.id) %>
 
-<h2>Body</h2>
-<p><%= @book.body %></p>
-
-<%= link_to "edit", edit_book_path(@book.id) %>
-
-<%= link_to "back", :back %>
+<%= link_to "Back", books_path %>
 
